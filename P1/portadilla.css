@@ -1,0 +1,182 @@
+/*Para que no haya separacion entre los elementos y el margen*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: 0;
+  }
+
+/*Cambiar la fuente a todo el body*/
+body{
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Divide la página en tres áreas: encabezado, contenido principal y pie de página */
+    min-height: 100vh; /* Usa la altura mínima para que la grilla ocupe al menos toda la ventana del navegador */
+ }
+
+/*Que todas las secciones tengan separacion*/
+.contenedor{
+  padding: 2% 0; /* Asegúrate de que el padding no sea demasiado grande */
+  width: 30%; /* Ajusta esto según sea necesario */
+  overflow: hidden;
+}
+
+header{
+  height:fit-content;
+  background: #ffd89b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #19547bb7, #ffd99bc9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#logo{
+    margin-top: 1%;
+    margin-left: 1%;
+    height:10em;  
+}
+
+.texto-header{
+    color:white;
+    font-size: 350%;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.logo-titulo{
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+}
+
+nav{
+    text-align:left;
+    padding: 0 0 0 0;
+    margin-left: 13%;
+}
+  
+nav > a{
+    color: white;
+    font-size:medium;
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 10%;
+}
+  
+nav > a:hover{
+    text-decoration:underline;
+}
+
+.wave{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/*------------------------------header---------------------------*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Crea dos columnas de igual tamaño */
+    gap: 20px; /* Espacio opcional entre las columnas */
+}
+
+.otros{
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    height:max-content;
+    width: 80%;
+    text-align: center;
+}
+
+.enlacesInteres{
+    padding-top: 3%;
+}
+
+nav > b{
+    color: black;
+    font-size:medium;
+    font-weight: 400;
+    display: inline-block; /* Hace que el enlace sea un bloque en línea, permitiendo la transformación */
+    transition: transform 0.3s ease; /* Aplica una transición suave al moverse */
+    padding-top: 2%;
+}
+
+nav > b:hover{
+    transform: translateX(10%);
+}
+
+.enlacesInteres img {
+    margin-right: 4%;
+    margin-top:6%;
+    width: 90%; /* Hace que la imagen ocupe todo el ancho de la celda */
+    height:130%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
+    object-position: center; /* Centra la imagen dentro de su contenedor */
+    border-radius: 0.5rem;
+  }
+
+.actividades{
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    height: max-content;
+    width: 80%;
+    text-align: center;
+}
+
+.titulo{
+    margin: 2%;
+}
+
+.galeria-act{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 2%;
+}
+
+.galeria-act img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la celda */
+    height: 100%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
+    object-position: center; /* Centra la imagen dentro de su contenedor */
+  }
+
+#foto{
+    border-radius: 0.5rem;
+}
+
+.imagen-act{
+    font-size:x-small
+}
+
+.imagen-act > p{
+    font-family:sans-serif;
+    background-color:whitesmoke;
+    font-size:small;
+    text-align: left;
+    color:rgb(87, 84, 84) ;
+}
+
+.imagen-act:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+  
+footer{
+    position: fixed; /* Fija el footer en una posición relativa a la ventana del navegador */
+    left: 0; /* Alinea el footer a la izquierda de la ventana del navegador */
+    bottom: 0; /* Alinea el footer a la parte inferior de la ventana del navegador */
+    height:3% ;
+    width: 100%;
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9);
+}
+
+.copy{
+    margin-top: 0.5%;
+    color:white;
+    text-align: center;    
+}

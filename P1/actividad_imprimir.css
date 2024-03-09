@@ -1,0 +1,31 @@
+body {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(41, 40, 40); /* Un fondo para hacer que el A4 destaque */
+  }
+  
+  .folio{
+    width: 700pt;
+    height: 900pt;
+    padding: 20mm;
+    margin: 10mm auto;
+    background-color: white; /* Fondo blanco para simular el papel */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra para efecto de papel */
+    box-sizing: border-box;
+  }
+  
+  @media print {
+    body, .pagina-a4 {
+      margin: 0;
+      box-shadow: none;
+    }
+  
+    .pagina-a4 {
+      width: 100%;
+      height: auto;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+  }
+  
