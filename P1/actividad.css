@@ -92,16 +92,17 @@ main {
     padding-top: 3%;
 }
 
-nav > b{
+.otros nav > a{
     color: black;
     font-size:medium;
     font-weight: 400;
+    text-decoration: none;
     display: inline-block; /* Hace que el enlace sea un bloque en línea, permitiendo la transformación */
     transition: transform 0.3s ease; /* Aplica una transición suave al moverse */
     padding-top: 2%;
 }
 
-nav > b:hover{
+.otros nav > a:hover{
     transform: translateX(10%);
 }
 
@@ -182,9 +183,9 @@ nav > b:hover{
 }
 
 .sociales img{
-    width: 100%; /* Hace que la imagen ocupe todo el ancho de la celda */
+    width: 110%; /* Hace que la imagen ocupe todo el ancho de la celda */
     height: 100%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */
-    object-fit: cover; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
+    object-fit:contain; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
     object-position: center; /* Centra la imagen dentro de su contenedor */
     border-radius: 0.5rem;
   }
