@@ -15,7 +15,25 @@ body {
     box-sizing: border-box;
   }
   
-  @media print {
+  .logo-titulo{
+    text-align: center;
+  }
+
+  #logo{
+    width: 15%;
+  }
+  
+  .info{
+    font-size: large;
+  }
+
+  .fechaprecio{
+    font-family: monospace;
+    font-size: large;
+    font-style: oblique ;
+  }
+  
+  /*@media print {
     body, .pagina-a4 {
       margin: 0;
       box-shadow: none;
@@ -27,5 +45,5 @@ body {
       page-break-after: always;
       page-break-inside: avoid;
     }
-  }
+  }*/
   

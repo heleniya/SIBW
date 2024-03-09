@@ -41,7 +41,7 @@ header{
 }
 
 .logo-titulo{
-    display: flex;
+    display: grid;
     align-items: center; /* Alinea verticalmente */
 }
 
