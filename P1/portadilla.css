@@ -91,16 +91,17 @@ main {
     padding-top: 3%;
 }
 
-nav > b{
+.otros nav > a{
     color: black;
     font-size:medium;
     font-weight: 400;
+    text-decoration: none;
     display: inline-block; /* Hace que el enlace sea un bloque en línea, permitiendo la transformación */
     transition: transform 0.3s ease; /* Aplica una transición suave al moverse */
     padding-top: 2%;
 }
 
-nav > b:hover{
+.otros nav > a:hover{
     transform: translateX(10%);
 }
 

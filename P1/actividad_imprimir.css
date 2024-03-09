@@ -7,8 +7,8 @@ body {
   
   .folio{
     width: 700pt;
-    height: 900pt;
-    padding: 20mm;
+    height: 850pt;
+    padding: 5%;
     margin: 10mm auto;
     background-color: white; /* Fondo blanco para simular el papel */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra para efecto de papel */
@@ -22,17 +22,29 @@ body {
   #logo{
     width: 15%;
   }
-  
-  .info{
-    font-size: large;
-  }
-
+ 
   .fechaprecio{
     font-family: monospace;
     font-size: large;
     font-style: oblique ;
   }
   
+  footer{
+    margin-top: 50%;
+    left: 0; /* Alinea el footer a la izquierda de la ventana del navegador */
+    bottom:0%; /* Alinea el footer a la parte inferior de la ventana del navegador */
+    height:3% ;
+    width: 100%;
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9);
+}
+
+.copy{
+  margin-top: 0.5%;
+  color:white;
+  text-align: center;    
+}
+
   /*@media print {
     body, .pagina-a4 {
       margin: 0;

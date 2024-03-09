@@ -38,6 +38,7 @@ header{
     font-size: 350%;
     text-align: center;
     margin-left: 3%;
+    margin-top: -10%; /*si lo quito se me va para abajo*/
 }
 
 .logo-titulo{
