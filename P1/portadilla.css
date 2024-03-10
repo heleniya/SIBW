@@ -21,7 +21,7 @@ body{
 }
 
 header{
-    width: 100%;
+width: 100%;
   height:fit-content;
   background: #ffd89b;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  /* Chrome 10-25, Safari 5.1-6 */
@@ -89,7 +89,7 @@ nav > a:hover{
 main {
     display: grid;
     grid-template-columns: 1fr 2fr; /* Crea dos columnas de igual tamaño */
-    gap: 20px; /* Espacio opcional entre las columnas */
+    gap: 2%; /* Espacio opcional entre las columnas */
 }
 
 .otros{
@@ -137,7 +137,7 @@ main {
     margin-bottom: 3%;
     background-color: whitesmoke;
     border-radius: 0.5rem;
-    height: max-content;
+    height:max-content;
     width: 80%;
     text-align: center;
 }
@@ -149,8 +149,9 @@ main {
 .galeria-act{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 6%;
     margin: 2%;
+    margin-bottom: 20%;
 }
 
 .galeria-act img {
@@ -196,4 +197,113 @@ footer{
     margin-top: 0.5%;
     color:white;
     text-align: center;    
+}
+
+/*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
+
+@media (max-width: 980px) {
+    #logo{
+        height:7em;
+    }
+
+    .texto-header{
+        font-size: 200%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .wave{
+        height: 10vh; /* Se adapta al 20% de la altura de la ventana de visualización */
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .imagen-act p{
+        font-size:x-small;
+    }
+  
+}
+
+@media (max-width: 650px) {
+    .otros h2{
+        font-size:medium;
+    }
+    
+    .actividades h2{
+        font-size:medium;
+    }
+
+    .otros nav > a{
+        font-size:x-small;
+    }    
+    .imagen-act p{
+        font-size:xx-small;
+    }
+
+}
+
+@media (max-width: 574px) {
+    #logo{
+        height:4em;
+    }
+
+    .texto-header{
+        font-size: 90%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    nav > a{
+        font-size:xx-small;
+    }
+
+    .wave{
+        height: 6vh; /* Se adapta al 20% de la altura de la ventana de visualización */
+    }   
+
+    .otros{
+        margin-top: 40%;
+    }
+
+    .otros h2{
+        font-size:x-small;
+    }
+    
+    .actividades{
+        margin-top: 20%;
+    }
+    
+    .actividades h2{
+        font-size:x-small;
+    }
+
+    .otros nav > a{
+        font-size:xx-small;
+    }    
+    .imagen-act p{
+        font-size:70%;
+    }
+
+    .imagen-act{
+        margin-top: 5%;
+        margin-bottom: 60%;
+    }
+
+    .galeria-act{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .galeria-act img {
+        width: 110%; /* Hace que la imagen ocupe todo el ancho de la celda */
+        height: 150%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */    
+    }
+
+    .otros a{
+        margin-bottom: 10%;
+    }
+    .otros img{
+        margin-bottom: 25%;
+    }
 }
