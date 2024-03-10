@@ -21,7 +21,7 @@ body{
 }
 
 header{
-width: 100%;
+  width: 100%;
   height:fit-content;
   background: #ffd89b;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  /* Chrome 10-25, Safari 5.1-6 */
