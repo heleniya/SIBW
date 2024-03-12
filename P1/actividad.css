@@ -3,56 +3,62 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: 0;
+    box-sizing: border-box;
   }
 
-/*Cambiar la fuente a todo el body*/
+/*Estilo para todo el body*/
 body{
     font-family: sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto; /* Divide la página en tres áreas: encabezado, contenido principal y pie de página */
-    min-height: 100vh; /* Usa la altura mínima para que la grilla ocupe al menos toda la ventana del navegador */
+    min-height: 100vh; 
  }
 
-/*Que todas las secciones tengan separacion*/
+/*Espacios para contenedores*/
 .contenedor{
-  padding: 2% 0; /* Asegúrate de que el padding no sea demasiado grande */
-  width: 30%; /* Ajusta esto según sea necesario */
-  overflow: hidden;
-}
+    padding: 2% 0; 
+    width: 30%; 
+    overflow: hidden;
+  }
+  
+/*-----------------------HEADER-----------------------*/
+/*Estilo para el encabezado, que ocupe todo el ancho y un degradado por estetica*/
+  header{
+    width: 100%;
+    height:fit-content;
+    background: #ffd89b;  
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9); 
+  }
+  
+  /*Tamaño y margenes para el logo*/
+  #logo{
+      margin-top: 1%;
+      margin-left: 1%;
+      height:10em;  
+  }
 
-header{
-  width: 100%;
-  height:fit-content;
-  background: #ffd89b;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #19547bb7, #ffd99bc9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#logo{
-    margin-top: 1%;
-    margin-left: 1%;
-    height:10em;  
-}
-
+/*Color, tamaño, margenes y justificacion del titulo*/
 .texto-header{
     color:white;
-    font-size: 350%;
+    font-size: 250%;
     text-align: center;
     margin-left: 3%;
 }
 
+/*Alinear el logo y el titulo verticalmente*/
 .logo-titulo{
     display: flex;
-    align-items: center; /* Alinea verticalmente */
+    align-items: center; 
 }
 
+/*Alinear los menus de navegacion a la izquierda y con margen para que no empiecen debajo del logo*/
 nav{
     text-align:left;
-    padding: 0 0 0 0;
     margin-left: 13%;
 }
-  
+
+
 nav > a{
     color: white;
     font-size:medium;
@@ -60,38 +66,40 @@ nav > a{
     text-decoration: none;
     margin-right: 10%;
 }
-  
+
+/*Cuando se pase el raton por un elemento del menu se subraya*/
 nav > a:hover{
     text-decoration:underline;
 }
 
+/*Estilo de la onda que separa el header del resto de la pagina*/
 .wave{
     position: relative;
     bottom: 0;
     width: 100%;  
-    height: 20vh;
+    height: 20vh; 
     overflow: hidden;
 }
 
-/* Estilo para el SVG dentro del contenedor "wave" */
 .wave svg {
-    height: 100%; /* Hace que el SVG ocupe el 100% de la altura del contenedor */
-    width: 100%; /* Hace que el SVG ocupe el 100% del ancho del contenedor */
+    height: 100%; /* Hace que ocupe el 100% de la altura del contenedor */
+    width: 100%; /* Hace que ocupe el 100% del ancho del contenedor */
   }
   
-  /* Estilo para el elemento "path" dentro del SVG */
-  .wave path {
+.wave path {
     stroke: none; /* Elimina el borde del path */
     fill: #fff; /* Establece el color de fondo del path a blanco */
   }
-/*------------------------------header---------------------------*/
 
+/*------------------------------MAIN---------------------------*/
+/*Organizacion del main con grid en dos partes, una mas pequeña para enlaces de interes y la derecha mas grande para las actividades con espacio entre ellas*/
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Crea dos columnas de igual tamaño */
-    gap: 2%; /* Espacio opcional entre las columnas */
+    grid-template-columns: 1fr 2fr;
+    gap: 2%; 
 }
 
+/*Estilos para el contenedor de los enlaces de interes*/
 .otros{
     margin-left: 20%;
     margin-top: 2%;
@@ -103,34 +111,39 @@ main {
     text-align: center;
 }
 
+/*Separacion entre los enlaces de interes*/
 .enlacesInteres{
     padding-top: 3%;
 }
 
+/*Estilos para las opciones de los enlaces de interes, con un diseño en bloque y una transicion suave para cuando se ponga el raton encima*/
 .otros nav > a{
     color: black;
     font-size:medium;
     font-weight: 400;
     text-decoration: none;
-    display: inline-block; /* Hace que el enlace sea un bloque en línea, permitiendo la transformación */
-    transition: transform 0.3s ease; /* Aplica una transición suave al moverse */
+    display: inline-block; 
+    transition: transform 0.3s ease; 
     padding-top: 2%;
 }
 
+/*Al pasar por encima de los enlaces de interes se mueven hacia la derecha*/
 .otros nav > a:hover{
     transform: translateX(10%);
 }
 
+/*Estilo para las imagenes de los enlaces de interes y ajustes para que esten centradas en su contenedor*/
 .enlacesInteres img {
     margin-right: 4%;
     margin-top:6%;
-    width: 90%; /* Hace que la imagen ocupe todo el ancho de la celda */
-    height:130%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */
-    object-fit: cover; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
-    object-position: center; /* Centra la imagen dentro de su contenedor */
+    width: 90%; 
+    height:130%; 
+    object-fit: cover; 
+    object-position: center; 
     border-radius: 0.5rem;
   }
 
+/* Estilo para las sección de actividad, definiendo márgenes, fondo, bordes, altura, ancho y alineación del texto. */
 .actividad{
     margin-left: 8%;
     margin-top: 1%;
@@ -142,10 +155,12 @@ main {
     text-align:center;
 }
 
+/*Estilo para el titulo*/
 .titulo{
     margin: 2%;
 }
 
+/* Estilo para la cabecera de la sección de actividad*/
 .cabecera{
     font-family:sans-serif;
     color:rgb(58, 58, 119);
@@ -154,21 +169,25 @@ main {
     margin-left: 3.5%;
 }
 
+/*Tamaño de la fuente del titulo*/
 #nombreActividad{
     font-size: x-large;
 }
 
+/* Diseño de contenedor para la actividad, utilizando grid para dividir el espacio entre el texto y las imágenes. */
 .actividad-contenedor{
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
+/* Ajustes de alineación y márgenes para el texto*/
 .texto{
     text-align: left;
     margin-left: 5%;
     margin-right: 2%;
 }
 
+/* Estilo para los marcos de las imagenes*/
 .marco-actividad{
     margin-left: 5%;
     margin-right: 5%;
@@ -176,15 +195,17 @@ main {
     height: 70%;
 }
 
-#fotillo{
+/*Estilo para la imagen, haceidno que este centrada y ocupe todo el contenedor*/
+.marco-actividad img{
     
-    width: 80%; /* Hace que la imagen ocupe todo el ancho de la celda */
-    height: 80%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */
-    object-fit: cover; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
-    object-position: center; /* Centra la imagen dentro de su contenedor */
+    width: 80%; 
+    height: 80%; 
+    object-fit: cover; 
+    object-position: center; 
     border-radius: 0.5rem;
 }
 
+/* Diseño de la sección de redes sociales y boton de imprimir, usando grid para distribuir los íconos y ajustar su tamaño y posición. */
 .sociales{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 4fr;
@@ -196,33 +217,37 @@ main {
 }
 
 .sociales img{
-    width: 110%; /* Hace que la imagen ocupe todo el ancho de la celda */
-    height: 100%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */
-    object-fit:contain; /* Ajusta la imagen para cubrir el espacio disponible sin perder las proporciones */
-    object-position: center; /* Centra la imagen dentro de su contenedor */
+    width: 110%; 
+    height: 100%; 
+    object-fit:contain; 
+    object-position: center; 
     border-radius: 0.5rem;
   }
 
+/* Estilo para el botón de impresión, centrando su contenido y definiendo su apariencia y transiciones. */
 .boton{
     display: grid;
-    place-items: center; /* Centra el contenido */
+    place-items: center; 
     width: 100%;
     height: 100%; 
     border-radius: 0.5rem;
     color: black;
     background-color: rgba(164, 164, 248, 0.274);
-    transition: color 0.5s; /* Transición suave del color del texto */
+    transition: color 0.5s; 
     text-decoration: none;
 }
 
+/*Al pasar el raton por el boton el texto se hace transparente*/
 .boton:hover a{
     color: transparent;
 }
 
+/*------------------------------FOOTER---------------------------*/
+/* Estilo para el pie de página, posicionandolo en la parte inferior de la ventana. */
 footer{
-    position: fixed; /* Fija el footer en una posición relativa a la ventana del navegador */
-    left: 0; /* Alinea el footer a la izquierda de la ventana del navegador */
-    bottom: 0; /* Alinea el footer a la parte inferior de la ventana del navegador */
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
     height:3% ;
     width: 100%;
     background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);
@@ -238,7 +263,7 @@ footer{
 /*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
 
 @media (max-width: 1750px) {
-    #fotillo{
+    .marco-actividad img{
         width: 100%;
         height: 70%;
     }
@@ -249,7 +274,7 @@ footer{
 }
 
 @media (max-width: 1200px){
-    #fotillo{
+    .marco-actividad img{
         width: 100%;
         height: 50%;
     }
@@ -269,10 +294,10 @@ footer{
     }
 
     .wave{
-        height: 10vh; /* Se adapta al 20% de la altura de la ventana de visualización */
+        height: 10vh; 
     }
 
-    #fotillo{
+    .marco-actividad img{
         object-position: right;
     }
 
@@ -387,95 +412,3 @@ footer{
         font-size: xx-small;
     }
 }
-
-
-/*@media (max-width: 800px) {
-    
-    .imagen-act p{
-        font-size:x-small;
-    }
-  
-}
-
-@media (max-width: 650px) {
-    .otros h2{
-        font-size:medium;
-    }
-    
-    .actividades h2{
-        font-size:medium;
-    }
-
-    .otros nav > a{
-        font-size:x-small;
-    }    
-    .imagen-act p{
-        font-size:xx-small;
-    }
-
-}
-
-@media (max-width: 574px) {
-    #logo{
-        height:4em;
-    }
-
-    .texto-header{
-        font-size: 90%;
-        margin-top: 2%;
-        margin-left: 2%;
-    }
-
-    nav > a{
-        font-size:xx-small;
-    }
-
-    .wave{
-        height: 6vh; /* Se adapta al 20% de la altura de la ventana de visualización */
-    /*}   
-
-    .otros{
-        margin-top: 40%;
-    }
-
-    .otros h2{
-        font-size:x-small;
-    }
-    
-    .actividades{
-        margin-top: 20%;
-    }
-    
-    .actividades h2{
-        font-size:x-small;
-    }
-
-    .otros nav > a{
-        font-size:xx-small;
-    }    
-    .imagen-act p{
-        font-size:70%;
-    }
-
-    .imagen-act{
-        margin-top: 5%;
-        margin-bottom: 60%;
-    }
-
-    .galeria-act{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .galeria-act img {
-        width: 110%; /* Hace que la imagen ocupe todo el ancho de la celda */
-       /* height: 150%; /* Opcional: ajusta la altura para que ocupe todo el espacio disponible */    
-    /*}
-
-    .otros a{
-        margin-bottom: 10%;
-    }
-    .otros img{
-        margin-bottom: 25%;
-    }
-}*/
