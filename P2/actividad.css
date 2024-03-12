@@ -140,9 +140,9 @@ main {
 /*Estilo para las imagenes de los enlaces de interes y ajustes para que esten centradas en su contenedor*/
 .enlacesInteres img {
     margin-right: 4%;
-    margin-top:6%;
-    width: 90%; 
-    height:130%; 
+    margin-top:2%;
+    width: 70%; 
+    height:auto; 
     object-fit: cover; 
     object-position: center; 
     border-radius: 0.5rem;
@@ -155,7 +155,7 @@ main {
     margin-bottom: 3%;
     background-color: whitesmoke;
     border-radius: 0.5rem;
-    height:max-content;
+    height:75%;
     width: 80%;
     text-align:center;
 }
@@ -167,6 +167,7 @@ main {
 
 /* Estilo para la cabecera de la sección de actividad*/
 .cabecera{
+    padding-top: 1%;
     font-family:sans-serif;
     color:rgb(58, 58, 119);
     text-align: left;
@@ -246,6 +247,52 @@ main {
 .boton:hover a{
     color: transparent;
 }
+
+/*P2*/
+
+.zona_comentarios{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    width: 80%;
+}
+
+.comentarios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    justify-content: center;    
+}
+
+.cuadro-comentario{
+    width: 15em;
+    height: 12rem;
+    background-color: white;
+    border-radius: 0.5em;
+    text-align: center;
+    margin: 5%;
+}
+
+.cuadro-comentario p{
+    padding: 5%;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*------------------------------FOOTER---------------------------*/
 /* Estilo para el pie de página, posicionandolo en la parte inferior de la ventana. */
