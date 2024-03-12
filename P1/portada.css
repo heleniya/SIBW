@@ -329,3 +329,10 @@ footer{
         margin-bottom: 25%;
     }
 }
+
+@media (max-width: 430px) {
+    .galeria-act img {
+        width: 80%; 
+        height: 100%;     
+    }
+}
