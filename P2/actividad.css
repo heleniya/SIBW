@@ -1,0 +1,415 @@
+/*
+    Helena Ruiz Aranda 
+    A2 
+    11/03/2024
+*/
+
+/*Para que no haya separacion entre los elementos y el margen*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+/*Estilo para todo el body*/
+body{
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Divide la página en tres áreas: encabezado, contenido principal y pie de página */
+    min-height: 100vh; 
+ }
+
+/*Espacios para contenedores*/
+.contenedor{
+    padding: 2% 0; 
+    width: 30%; 
+    overflow: hidden;
+  }
+  
+/*-----------------------HEADER-----------------------*/
+/*Estilo para el encabezado, que ocupe todo el ancho y un degradado por estetica*/
+  header{
+    width: 100%;
+    height:fit-content;
+    background: #ffd89b;  
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9); 
+  }
+  
+  /*Tamaño y margenes para el logo*/
+  #logo{
+      margin-top: 1%;
+      margin-left: 1%;
+      height:10em;  
+  }
+
+/*Color, tamaño, margenes y justificacion del titulo*/
+.texto-header{
+    color:white;
+    font-size: 250%;
+    text-align: center;
+    margin-left: 3%;
+}
+
+/*Alinear el logo y el titulo verticalmente*/
+.logo-titulo{
+    display: flex;
+    align-items: center; 
+}
+
+/*Alinear los menus de navegacion a la izquierda y con margen para que no empiecen debajo del logo*/
+nav{
+    text-align:left;
+    margin-left: 13%;
+}
+
+
+nav > a{
+    color: white;
+    font-size:medium;
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 10%;
+}
+
+/*Cuando se pase el raton por un elemento del menu se subraya*/
+nav > a:hover{
+    text-decoration:underline;
+}
+
+/*Estilo de la onda que separa el header del resto de la pagina*/
+.wave{
+    position: relative;
+    bottom: 0;
+    width: 100%;  
+    height: 20vh; 
+    overflow: hidden;
+}
+
+.wave svg {
+    height: 100%; /* Hace que ocupe el 100% de la altura del contenedor */
+    width: 100%; /* Hace que ocupe el 100% del ancho del contenedor */
+  }
+  
+.wave path {
+    stroke: none; /* Elimina el borde del path */
+    fill: #fff; /* Establece el color de fondo del path a blanco */
+  }
+
+/*------------------------------MAIN---------------------------*/
+/*Organizacion del main con grid en dos partes, una mas pequeña para enlaces de interes y la derecha mas grande para la actividad*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2%; 
+}
+
+/*Estilos para el contenedor de los enlaces de interes*/
+.otros{
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    height:max-content;
+    width: 80%;
+    text-align: center;
+}
+
+/*Separacion entre los enlaces de interes*/
+.enlacesInteres{
+    padding-top: 3%;
+}
+
+/*Estilos para las opciones de los enlaces de interes, con un diseño en bloque y una transicion suave para cuando se ponga el raton encima*/
+.otros nav > a{
+    color: black;
+    font-size:medium;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+    padding-top: 2%;
+}
+
+/*Al pasar por encima de los enlaces de interes se mueven hacia la derecha*/
+.otros nav > a:hover{
+    transform: translateX(10%);
+}
+
+/*Estilo para las imagenes de los enlaces de interes y ajustes para que esten centradas en su contenedor*/
+.enlacesInteres img {
+    margin-right: 4%;
+    margin-top:6%;
+    width: 90%; 
+    height:130%; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 0.5rem;
+  }
+
+/* Estilo para las sección de actividad, definiendo márgenes, fondo, bordes, altura, ancho y alineación del texto. */
+.actividad{
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    height:max-content;
+    width: 80%;
+    text-align:center;
+}
+
+/*Estilo para el titulo*/
+.titulo{
+    margin: 2%;
+}
+
+/* Estilo para la cabecera de la sección de actividad*/
+.cabecera{
+    font-family:sans-serif;
+    color:rgb(58, 58, 119);
+    text-align: left;
+    margin-top: 2%;
+    margin-left: 3.5%;
+}
+
+/*Tamaño de la fuente del titulo*/
+#nombreActividad{
+    font-size: x-large;
+}
+
+/* Diseño de contenedor para la actividad, utilizando grid para dividir el espacio entre el texto y las imágenes. */
+.actividad-contenedor{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* Ajustes de alineación y márgenes para el texto*/
+.texto{
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+/* Estilo para los marcos de las imagenes*/
+.marco-actividad{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 70%;
+}
+
+/*Estilo para la imagen, haciendno que este centrada y ocupe todo el contenedor*/
+.marco-actividad img{
+    
+    width: 80%; 
+    height: 80%; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 0.5rem;
+}
+
+/* Diseño de la sección de redes sociales y boton de imprimir, usando grid para distribuir los íconos y ajustar su tamaño y posición. */
+.sociales{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 4fr;
+    gap: 5%;
+    width: 30%;
+    margin-top: 4%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+}
+
+.sociales img{
+    width: 110%; 
+    height: 100%; 
+    object-fit:contain; 
+    object-position: center; 
+    border-radius: 0.5rem;
+  }
+
+/* Estilo para el botón de impresión, centrando su contenido y definiendo su apariencia y transiciones. */
+.boton{
+    display: grid;
+    place-items: center; 
+    width: 100%;
+    height: 100%; 
+    border-radius: 0.5rem;
+    color: black;
+    background-color: rgba(164, 164, 248, 0.274);
+    transition: color 0.5s; 
+    text-decoration: none;
+}
+
+/*Al pasar el raton por el boton el texto se hace transparente*/
+.boton:hover a{
+    color: transparent;
+}
+
+/*------------------------------FOOTER---------------------------*/
+/* Estilo para el pie de página, posicionandolo en la parte inferior de la ventana. */
+footer{
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    height:3% ;
+    width: 100%;
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9);
+}
+
+.copy{
+    margin-top: 0.5%;
+    color:white;
+    text-align: center;    
+}
+
+/*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
+
+@media (max-width: 1750px) {
+    .marco-actividad img{
+        width: 100%;
+        height: 70%;
+    }
+
+    .marco-actividad{
+        height: 60%;
+    }
+}
+
+@media (max-width: 1200px){
+    .marco-actividad img{
+        width: 100%;
+        height: 50%;
+    }
+
+
+}
+
+@media (max-width: 985px) {
+    #logo{
+        height:7em;
+    }
+
+    .texto-header{
+        font-size: 200%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .wave{
+        height: 10vh; 
+    }
+
+    .otros h2{
+        font-size:medium;
+    }
+    
+    .otros .enlacesInteres a{
+        font-size: small;
+    }
+
+    .otros a{
+        margin-bottom: 10%;
+    }
+    .otros img{
+        margin-bottom: 25%;
+    }
+
+    .actividad h2{
+        font-size:medium;
+    }
+
+    .actividad h3{
+        font-size: small;
+    }
+
+    .actividad p{
+        font-size: small;
+    }
+
+    .sociales{
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .marco-actividad{
+        width: 75%;
+        height: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .otros h2{
+        font-size:medium;
+    }
+
+    .otros nav > a{
+        font-size:x-small;
+    }    
+    .imagen-act p{
+        font-size:xx-small;
+    }
+
+    .marco-actividad{
+        width: 75%;
+        height: 30%;
+    }
+
+    .sociales{
+        width: 60%;
+    }
+
+    .sociales .boton a{
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #logo{
+        height:4em;
+    }
+
+    .texto-header{
+        font-size: 110%;
+    }
+
+    nav > a{
+        font-size: x-small;
+    }
+
+    .otros h2{
+        font-size: small;
+    }
+
+    .otros .enlacesInteres > a{
+        font-size:x-small;
+    } 
+
+    .marco-actividad{
+        width: 75%;
+        height: 20%;
+    }
+
+    .actividad h2{
+        font-size: small;
+    }
+
+    .actividad h3{
+        font-size: x-small;
+    }
+
+    .actividad .texto p{
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .actividad .texto p{
+        font-size: xx-small;
+    }
+}

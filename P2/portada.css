@@ -1,0 +1,338 @@
+/*
+    Helena Ruiz Aranda 
+    A2 
+    11/03/2024
+*/
+
+/*Para que no haya separacion entre los elementos y el margen*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+/*Estilo para todo el body*/
+body{
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Divide la página en tres áreas: encabezado, contenido principal y pie de página */
+    min-height: 100vh; 
+ }
+
+/*Espacios para contenedores*/
+.contenedor{
+  padding: 2% 0; 
+  width: 30%; 
+  overflow: hidden;
+}
+
+/*-----------------------HEADER-----------------------*/
+/*Estilo para el encabezado, que ocupe todo el ancho y un degradado por estetica*/
+header{
+  width: 100%;
+  height:fit-content;
+  background: #ffd89b;  
+  background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);  
+  background: linear-gradient(to right, #19547bb7, #ffd99bc9); 
+}
+
+/*Tamaño y margenes para el logo*/
+#logo{
+    margin-top: 1%;
+    margin-left: 1%;
+    height:10em;  
+}
+
+/*Color, tamaño, margenes y justificacion del titulo*/
+.texto-header{
+    color:white;
+    font-size: 250%;
+    text-align: center;
+    margin-left: 3%;
+}
+
+/*Alinear el logo y el titulo verticalmente*/
+.logo-titulo{
+    display: flex;
+    align-items: center; 
+}
+
+/*Alinear los menus de navegacion a la izquierda y con margen para que no empiecen debajo del logo*/
+nav{
+    text-align:left;
+    margin-left: 13%;
+}
+
+
+nav > a{
+    color: white;
+    font-size:medium;
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 10%;
+}
+
+/*Cuando se pase el raton por un elemento del menu se subraya*/
+nav > a:hover{
+    text-decoration:underline;
+}
+
+/*Estilo de la onda que separa el header del resto de la pagina*/
+.wave{
+    position: relative;
+    bottom: 0;
+    width: 100%;  
+    height: 20vh; 
+    overflow: hidden;
+}
+
+.wave svg {
+    height: 100%; /* Hace que ocupe el 100% de la altura del contenedor */
+    width: 100%; /* Hace que ocupe el 100% del ancho del contenedor */
+  }
+  
+.wave path {
+    stroke: none; /* Elimina el borde del path */
+    fill: #fff; /* Establece el color de fondo del path a blanco */
+  }
+
+/*------------------------------MAIN---------------------------*/
+/*Organizacion del main con grid en dos partes, una mas pequeña para enlaces de interes y la derecha mas grande para las actividades con espacio entre ellas*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2%; 
+}
+
+/*Estilos para el contenedor de los enlaces de interes*/
+.otros{
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    height:max-content;
+    width: 80%;
+    text-align: center;
+}
+
+/*Separacion entre los enlaces de interes*/
+.enlacesInteres{
+    padding-top: 3%;
+}
+
+/*Estilos para las opciones de los enlaces de interes, con una diseño en bloque y una transicion suave para cuando se ponga el raton encima*/
+.otros nav > a{
+    color: black;
+    font-size:medium;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+    padding-top: 2%;
+}
+
+/*Al pasar por encima de los enlaces de interes se mueven hacia la derecha*/
+.otros nav > a:hover{
+    transform: translateX(10%);
+}
+
+/*Estilo para las imagenes de los enlaces de interes y ajustes para que esten centradas en su contenedor*/
+.enlacesInteres img {
+    margin-right: 4%;
+    margin-top:6%;
+    width: 90%; 
+    height:130%; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 0.5rem;
+  }
+
+/*Estilos para el contenedor de las actividades*/
+.actividades{
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    height:max-content;
+    width: 80%;
+    text-align: center;
+}
+
+.titulo{
+    margin: 2%;
+}
+
+/*Dentro del contenedor en el que se exponen las actividades estas estaran organizadas con grid en tres columnas con separacion entre ellas*/
+.galeria-act{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6%;
+    margin: 2%;
+    margin-bottom: 20%;
+}
+
+/*Las imagenes ocupan toda la celda y estan centradas*/
+.galeria-act img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 0.5rem;
+  }
+
+/*Estilo para el titulo de cada actividad*/
+.imagen-act > p{
+    font-family:sans-serif;
+    background-color:whitesmoke;
+    font-size:small;
+    text-align: left;
+    color:rgb(87, 84, 84) ;
+}
+
+/*Al pasar el raton por encima de las imagenes de actividades crecen*/
+.imagen-act:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+
+/*------------------------------FOOTER---------------------------*/
+/*Estilos para el footer: este estara en una posicion relativa a la ventana, alineado en la esquina de abajo a la izquierda y tendra un degradado como el del header*/
+footer{
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    height:3% ;
+    width: 100%;
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9);
+}
+
+/*Estilo para el texto del footer*/
+.copy{
+    margin-top: 0.5%;
+    color:white;
+    text-align: center;    
+}
+
+/*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
+
+/*Para pantallas mas pequelas que el tamaño del logo y el titulo sea mas pequeño y el angulo de la onda menos pronunciado*/
+@media (max-width: 980px) {
+    #logo{
+        height:7em;
+    }
+
+    .texto-header{
+        font-size: 200%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .wave{
+        height: 10vh; 
+    }
+}
+
+/*Con pantallas mas pequeñas decrece el tamñao de la fuente de los titulos de las actividades para mejorar legibilidad*/
+@media (max-width: 800px) {
+    
+    .imagen-act p{
+        font-size:x-small;
+    }
+  
+}
+
+/*Con pantallas aun mas pequeñas decrecen los titulos de enlaces de los contenedores, de las actividades y las opciones del menu de navegacion */
+@media (max-width: 650px) {
+    .otros h2{
+        font-size:medium;
+    }
+    
+    .actividades h2{
+        font-size:medium;
+    }
+
+    .otros nav > a{
+        font-size:x-small;
+    }    
+    .imagen-act p{
+        font-size:xx-small;
+    }
+
+}
+
+/*Con pantallas tan pequeñas como las de los moviles se ajusta el tamaño de todo*/
+@media (max-width: 575px) {
+    #logo{
+        height:4em;
+    }
+
+    .texto-header{
+        font-size: 90%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    nav > a{
+        font-size:xx-small;
+    }
+
+    .wave{
+        height: 6vh; 
+    }   
+
+    .otros{
+        margin-top: 40%;
+    }
+
+    .otros h2{
+        font-size:x-small;
+    }
+    
+    .actividades{
+        margin-top: 20%;
+    }
+    
+    .actividades h2{
+        font-size:x-small;
+    }
+
+    .otros nav > a{
+        font-size:xx-small;
+    }    
+    .imagen-act p{
+        font-size:70%;
+    }
+
+    .imagen-act{
+        margin-top: 5%;
+        margin-bottom: 60%;
+    }
+
+    .galeria-act{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .galeria-act img {
+        width: 110%; 
+        height: 150%;     
+    }
+
+    .otros a{
+        margin-bottom: 10%;
+    }
+    .otros img{
+        margin-bottom: 25%;
+    }
+}
+
+@media (max-width: 430px) {
+    .galeria-act img {
+        width: 80%; 
+        height: 100%;     
+    }
+}
