@@ -1,4 +1,9 @@
-/*12/03*/
+/*
+    Helena Ruiz Aranda 
+    A2 
+    11/03/2024
+*/
+
 /*Estilo general del documento*/
 body {
     justify-content: center;
@@ -7,6 +12,19 @@ body {
     background-color: rgb(41, 40, 40); /* Un fondo para hacer que el A4 destaque */
   }
   
+  /*Para ocultar los elementos que no deben mostrarse en actividad_imprimir, como el encabezado y 
+  los enlaces de interes entre otras cosas; para poder seguir la instruccion de hacer que el 
+  imprimir.html sea practicamente igual que el actividad.html y ocultar las cosas en el css*/
+
+  body > header{
+    display: none;
+  }
+
+  .sociales{
+    display: none;
+  }
+  
+
   .folio{   /*Va a simular el folio a imprimir*/
     width: 50vw;
     height: 120vh;
@@ -107,7 +125,7 @@ body {
   }
 
   footer{
-    margin-top: 50%;
+    margin-top: 30%;
     font-size: x-small;
   }
 } 
