@@ -35,21 +35,19 @@
         </div>
     </header>
     <main>  <!-- Contenido principal de la página -->
-        <section class="otros_comentario">  <!--Esta seccion es la columna izquierda de la pagina, en esta se encuentran los enlaces de interes y el formulario a rellenar-->
-            <section class="otros"> <!-- Sección para enlaces de interés -->
-                <h2 class="titulo">Enlaces de interés</h2>
-                <nav class="enlacesInteres">
-                    <!-- Enlaces con imágenes -->
-                    <a href="#">&#x2192 Tiempo</a>
-                    <img src="images/nublado.png" alt="">
-                    <a href="#">&#x2192 Disponibilidad</a>
-                    <img src="images/calendar-png-image_7114740.png" alt="">
-                    <a href="#">&#x2192 Colaboradores</a>
-                    <img src="images/ugr-horizontal.svg" alt="">
-                </nav>        
-            </section>
+        <section class="otros"> <!-- Sección para enlaces de interés -->
+            <h2 class="titulo">Enlaces de interés</h2>
+            <nav class="enlacesInteres">
+                <!-- Enlaces con imágenes -->
+                <a href="#">&#x2192 Tiempo</a>
+                <img src="images/nublado.png" alt="">
+                <a href="#">&#x2192 Disponibilidad</a>
+                <img src="images/calendar-png-image_7114740.png" alt="">
+                <a href="#">&#x2192 Colaboradores</a>
+                <img src="images/ugr-horizontal.svg" alt="">
+            </nav>        
         </section>
-        <section class="actividad_comentario">  <!--Esta seccion es la columna derecha de la pagina, en esta se encuentran la actividad y los comentarios de los usuarios-->
+        <div class="columnaActividadComentarios">
             <section class="actividad"> <!-- Sección para mostrar la actividad -->
                 <div class="cabecera">  <!-- Contenedor principal para el encabezado de la actividad con el nombre, fecha y precio -->
                     <h2>ESCALADA LOS CAHORROS</h2>
@@ -96,30 +94,10 @@
                     </div>
                 </div>
             </section>
-            <section class="zona_comentarios">   <!--Los comentarios con la el autor, fecha y hora-->
-                <h2 class="titulo">Comentarios</h2>
-                <section class="comentarios">
-                    <div class="cuadro-comentario">
-                        <p> Helenaa Ruiz</p>
-                        <p> 15/12</p>
-                        <p> 15:12</p>
-                        <p>Ole</p>
-                    </div>
-                    <div class="cuadro-comentario">
-                            <p> Laura Ariza</p>
-                            <p> 11/12</p>
-                            <p> 11:12</p>
-                            <p>Aaaaaaaaaaaaaaaaaaaaaa</p>
-                    </div>  
-                    <div class="cuadro-comentario">
-                        <p> Laura Ariza</p>
-                        <p> 11/12</p>
-                        <p> 11:12</p>
-                        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    </div>   
-                </section>           
+            <section class="zonaComentarios">
+            <button type="button" id="mostrarCom" class="boton">Mostrar comentarios</button>        <!--boton para mostrar comentarios-->
             </section>
-        </section>
+        </div>
     </main>
     <footer>    <!-- Pie de página -->
         <h5 class="copy">&copy; 2024 - Helena Ruiz Aranda </h5> <!-- Copyright -->
