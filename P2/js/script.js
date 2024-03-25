@@ -6,11 +6,12 @@ function funcion_mostrar() {
     
     if (comentarios.classList.contains('visible')) {
         boton.style.transform = 'translateX(-44.5vw) translateY(-10vh)'; // Mueve el botón hacia la izquierda
-        boton.style.transform =
-        comentarios.style.marginLeft = '0'; // Asegúrate de que la sección se mueva hacia la izquierda
+
+        boton.textContent = 'Ocultar comentarios'; // Cambia el texto al mostrar los comentarios
     } else {
         boton.style.transform = 'rotate(-90deg)'; // Devuelve el botón a su posición original
         comentarios.style.marginLeft = '100%'; // Oculta la sección moviéndola fuera de la vista
+        boton.textContent = 'Mostrar comentarios'; // Vuelve al texto original al ocultar los comentarios
     }
 }
 
