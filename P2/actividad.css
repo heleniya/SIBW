@@ -288,7 +288,18 @@ main {
 
     overflow: auto;
     top: 120vh;
+    white-space: nowrap;
 }
+
+
+.prueba{
+    display: inline-block; /* Muestra los comentarios en línea para el desplazamiento horizontal */
+    margin: 3%;
+    overflow-wrap: break-word;
+    overflow: auto;
+    white-space: normal;
+}
+
 
 #zonaEscondida{
     overflow-x: auto; /* Habilita el desplazamiento horizontal si el contenido interno es más ancho */
@@ -298,21 +309,20 @@ main {
 }
 
 .comment{
-    display: inline-block; /* Muestra los comentarios en línea para el desplazamiento horizontal */
     background-color: white;
     height: 60%;
-    width:50%;
-    margin: 3%;
+    width:55%;
+
     padding: 1%;
     border-radius: 0.5rem;
     text-align: left;
-    overflow-wrap: break-word;
-    overflow: auto;
-    white-space: normal;
+    object-position: center;
+
 }
 
 .comment p{
     object-fit: cover; 
+    object-position: center;
 }
 .visible {
     transform: translateX(-68.15vw); /* Muestra la sección */
@@ -327,6 +337,11 @@ main {
     font-size: smaller;
     color: grey;
 }
+
+formComentario {
+    margin-top: 200px; /* Ajusta este valor según necesites */
+}
+
 
 /*------------------------------/P2---------------------------*/
 
