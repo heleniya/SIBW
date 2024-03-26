@@ -288,10 +288,17 @@ main {
     justify-content: center;
 }
 
+#zonaEscondida{
+    overflow-x: auto; /* Habilita el desplazamiento horizontal si el contenido interno es más ancho */
+    overflow-y: hidden; /* Evita el desplazamiento vertical */}
+
 .comment{
+    display: inline-block; /* Muestra los comentarios en línea para el desplazamiento horizontal */
     background-color: white;
-    height: 60%;
+    height: max-content;
+    width:fit-content;
     margin: 10%;
+    padding: 5%;
     border-radius: 0.5rem;
     text-align: left;
 }
