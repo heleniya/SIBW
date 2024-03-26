@@ -277,16 +277,27 @@ main {
     background-color: whitesmoke;
     border-radius: 0.5rem;
     height:20%;
-    width: 50%;
-    text-align:center;
-    justify-content: center;
+    width: 52%;
     transition: transform 0.5s ease; /* Suaviza la transición */
     right: -60vw;
     bottom: -35vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align:center;
+    justify-content: center;
+}
+
+.comment{
+    background-color: white;
+    height: 60%;
+    margin: 10%;
+    border-radius: 0.5rem;
+    text-align: left;
 }
 
 .visible {
-    transform: translateX(-70vw); /* Muestra la sección */
+    transform: translateX(-68vw); /* Muestra la sección */
     
 }
 
