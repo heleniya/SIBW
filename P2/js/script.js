@@ -5,7 +5,7 @@ function funcion_mostrar() {
     comentarios.classList.toggle('visible');
     
     if (comentarios.classList.contains('visible')) {
-        boton.style.transform = 'translateX(-44.5vw) translateY(-10vh)'; // Mueve el botón hacia la izquierda
+        boton.style.transform = 'translateX(-45.25vw) translateY(-10vh)'; // Mueve el botón hacia la izquierda
 
         boton.textContent = 'Ocultar comentarios'; // Cambia el texto al mostrar los comentarios
     } else {
