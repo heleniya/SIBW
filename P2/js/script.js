@@ -1,3 +1,4 @@
+/*
 const boton = document.getElementById("mostrarCom");
 var comentarios = document.getElementById("zonaEscondida");
 
@@ -55,4 +56,62 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-  
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
+
+  const boton = document.getElementById("mostrarCom");
+  const comentarios = document.getElementById("zonaEscondida");
+  const form = document.querySelector('.needs-validation');
+  const modalExample = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+  boton.addEventListener('click', funcion_mostrar);
+
+  function funcion_mostrar() {    
+      comentarios.classList.toggle('visible');
+      
+      if (comentarios.classList.contains('visible')) {
+          boton.style.transform = 'translateX(-45.25vw) translateY(-10vh)';
+          boton.textContent = 'Ocultar comentarios';
+      } else {
+          boton.style.transform = 'rotate(-90deg)';
+          comentarios.style.marginLeft = '100%';
+          boton.textContent = 'Mostrar comentarios';
+      }
+  }
+
+  form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+          modalExample.show();
+      } else {
+          // Si el formulario es válido, prevenir el comportamiento por defecto y agregar el comentario
+          event.preventDefault();
+          agregarComentario();
+      }
+
+      form.classList.add('was-validated');
+  });
+
+  function agregarComentario() {
+      const nombre = document.getElementById('floatingName').value;
+      const email = document.getElementById('floatingInput').value;
+      const comentarioTexto = document.getElementById('floatingTextarea').value;
+      
+      const nuevoComentario = document.createElement('div');
+      nuevoComentario.classList.add('comment', 'prueba');
+      nuevoComentario.innerHTML = `
+          <p id="autor"><strong>${nombre}</strong> (${email})</p>
+          <p>${comentarioTexto}</p>
+      `;
+
+      comentarios.appendChild(nuevoComentario);
+      
+      // Opcional: Limpiar los campos del formulario
+      form.reset();
+  }
+});
+
+

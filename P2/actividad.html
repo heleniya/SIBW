@@ -20,7 +20,7 @@
 
   </head>
 
-  <body>    <!-- Contenido principal -->
+  <body>    <!-- Contenido principal -->    
     <header>    <!-- Encabezado de la página -->
         <div class="logo-titulo">   <!-- Contenedor para el logo y el título -->
             <img id="logo" src="images/logo14-modified.png" alt=""> <!-- Logo -->
@@ -115,34 +115,34 @@
                         <p>Comentario: Muy informativa, gracias.</p>
                     </div>
                     
-                        <div class="formComentario prueba">
-                            <form class="needs-validation" novalidate>
-                            <div class="row g-2">
-                              <div class="col-md">
-                                <div class="form-floating mb-3">
-                                  <input type="text" class="form-control" id="floatingName" placeholder="Name" required>
-                                  <label for="floatingName">Nombre</label>
-                                  <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
-                                </div>
-                              </div>
-                              <div class="col-md">
-                                <div class="form-floating mb-3">
-                                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                                  <label for="floatingInput">Email</label>
-                                  <div class="invalid-feedback">Por favor, introduce tu correo electrónico.</div>
-                                </div>
-                              </div>
-                            </div>
+                    <div class="formComentario prueba">
+                        <form class="needs-validation" novalidate>
+                        <div class="row g-2">
+                          <div class="col-md">
                             <div class="form-floating mb-3">
-                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
-                              <label for="floatingTextarea">Comentarios</label>
-                              <div class="invalid-feedback">Por favor, deja un comentario.</div>
+                              <input type="text" class="form-control" id="floatingName" placeholder="Name" required>
+                              <label for="floatingName">Nombre</label>
+                              <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
                             </div>
-                            <div class="col-12">
-                              <button class="btn btn-primary" type="submit">Enviar</button>
+                          </div>
+                          <div class="col-md">
+                            <div class="form-floating mb-3">
+                              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                              <label for="floatingInput">Email</label>
+                              <div class="invalid-feedback">Por favor, introduce tu correo electrónico.</div>
                             </div>
-                            </form>
+                          </div>
                         </div>
+                        <div class="form-floating mb-3">
+                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+                          <label for="floatingTextarea">Comentarios</label>
+                          <div class="invalid-feedback">Por favor, deja un comentario.</div>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Enviar</button>
+                        </div>
+                        </form>
+                    </div>
                      
                       
                       
@@ -151,6 +151,25 @@
             </section>
         </div>
     </main>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Error al enviar comentario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡Vaya!<br> Parece que ocurrió un error al enviar el comentario, comprueba que todos los campos son correctos. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
     <footer>    <!-- Pie de página -->
         <h5 class="copy">&copy; 2024 - Helena Ruiz Aranda </h5> <!-- Copyright -->
     </footer>
