@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Si el formulario es válido, prevenir el comportamiento por defecto y agregar el comentario
           event.preventDefault();
           agregarComentario();
+          modalExample.hide();
       }
 
       form.classList.add('was-validated');
@@ -109,9 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       comentarios.appendChild(nuevoComentario);
       
-      // Opcional: Limpiar los campos del formulario
-      form.reset();
+      
+
   }
 });
 
-
+      // Opcional: Limpiar los campos del formulario
+      form.reset();
