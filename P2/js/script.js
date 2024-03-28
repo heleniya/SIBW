@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Si el formulario es válido, prevenir el comportamiento por defecto y agregar el comentario
           event.preventDefault();
           agregarComentario();
+          modalSuccess.show();
       }
 
       form.classList.add('was-validated');
