@@ -252,7 +252,7 @@ main {
 
 .columnaActividadComentarios{
     display: grid;
-    margin-bottom: 25%;
+    margin-bottom: 5%;
 }
 
 #mostrarCom{
@@ -363,6 +363,7 @@ footer{
     margin-top: 0.5%;
     color:white;
     text-align: center;    
+    font-size: medium;
 }
 
 /*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
