@@ -102,19 +102,41 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('floatingInput').value;
       const comentarioTexto = document.getElementById('floatingTextarea').value;
       
+      const ahora = new Date();
+      const fechaHora = ahora.getDate().toString().padStart(2, '0') +'-'+ (ahora.getMonth()+1).toString().padStart(2, '0')+'-'+ ahora.getFullYear().toString()+' ' + 
+      ahora.getHours().toString().padStart(2,'0') + ':'+ahora.getMinutes().toString().padStart(2,'0');
+
       const nuevoComentario = document.createElement('div');
       nuevoComentario.classList.add('comment', 'prueba');
-      nuevoComentario.innerHTML = `
-          <p id="autor"><strong>${nombre}</strong> (${email})</p>
-          <p>${comentarioTexto}</p>
-      `;
+      nuevoComentario.innerHTML = 
+          `<p id="autor">${nombre} (${email})</p>
+          <p id="fecha"> ${fechaHora} </p>
+          <p> Comentario: ${comentarioTexto}</p>`;
 
-      comentarios.appendChild(nuevoComentario);
-      
-      
-
+      comentarios.appendChild(nuevoComentario);   
   }
+
+    // Array con las palabras prohibidas
+    const palabrasProhibidas = ['puta ', 'mierda'];
+        
+    // Seleccionar el campo de texto del comentario
+    const comentarioTexto = document.getElementById('floatingTextarea');
+
+    // Función para reemplazar palabras prohibidas por asteriscos
+    function censurar(texto) {
+        palabrasProhibidas.forEach(palabra => {
+            const regex = new RegExp(palabra); // g: global, i: case insensitive
+            const asteriscos = '*'.repeat(palabra.length);
+            texto = texto.replace(regex, asteriscos);
+        });
+        return texto;
+    }
+
+    // Escuchar por cambios en el campo de comentario
+    comentarioTexto.addEventListener('input', () => {
+        const textoOriginal = comentarioTexto.value;
+        const textoFiltrado = censurar(textoOriginal);
+        comentarioTexto.value = textoFiltrado;
+    });
 });
 
-      // Opcional: Limpiar los campos del formulario
-      form.reset();
