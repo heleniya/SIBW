@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const boton = document.getElementById("mostrarCom");
   const comentarios = document.getElementById("zonaEscondida");
   const form = document.querySelector('.needs-validation');
-  const modalExample = new bootstrap.Modal(document.getElementById('exampleModal'));
+  const modalError = new bootstrap.Modal(document.getElementById('errorModal'));
+  const modalSuccess = new bootstrap.Modal(document.getElementById('successModal'));
 
   boton.addEventListener('click', funcion_mostrar);
 
@@ -85,11 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          modalExample.show();
+          modalError.show();
       } else {
           // Si el formulario es válido, prevenir el comportamiento por defecto y agregar el comentario
           event.preventDefault();
           agregarComentario();
+          modalSuccess.show();
       }
 
       form.classList.add('was-validated');
@@ -109,9 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       comentarios.appendChild(nuevoComentario);
       
-      // Opcional: Limpiar los campos del formulario
-      form.reset();
+      
+
   }
 });
 
-
+      // Opcional: Limpiar los campos del formulario
+      form.reset();

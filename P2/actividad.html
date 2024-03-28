@@ -103,18 +103,6 @@
             <section class="zonaComentarios">
                 <button type="button" id="mostrarCom" class="boton">Mostrar comentarios</button>        <!--boton para mostrar comentarios-->
                 <section id="zonaEscondida" class="comentarios">
-                    <div class="comment prueba">
-                        <p id="autor">Juan Pérez</p>
-                        <p id="fecha">24-03-2024 10:00</p>
-                        <p>Comentario: Crear un espacio donde los comentarios fluyan es esencial para la interacción en cualquier plataforma digital. Permite el intercambio de ideas y opiniones, enriqueciendo la experiencia de todos los usuarios involucrados.
-                        </p>
-                    </div>
-                    <div class="comment prueba">
-                        <p id="autor">Ana Gómez</p>
-                        <p id="fecha">25-03-2024v 5:30</p>
-                        <p>Comentario: Muy informativa, gracias.</p>
-                    </div>
-                    
                     <div class="formComentario prueba">
                         <form class="needs-validation" novalidate>
                         <div class="row g-2">
@@ -143,25 +131,51 @@
                         </div>
                         </form>
                     </div>
-                     
-                      
-                      
-                      
+                    
+                    <div class="comment prueba">
+                        <p id="autor">Juan Pérez</p>
+                        <p id="fecha">24-03-2024 10:00</p>
+                        <p>Comentario: Crear un espacio donde los comentarios fluyan es esencial para la interacción en cualquier plataforma digital. Permite el intercambio de ideas y opiniones, enriqueciendo la experiencia de todos los usuarios involucrados.
+                        </p>
+                    </div>
+                    <div class="comment prueba">
+                        <p id="autor">Ana Gómez</p>
+                        <p id="fecha">25-03-2024v 5:30</p>
+                        <p>Comentario: Muy informativa, gracias.</p>
+                    </div>       
                 </section>
             </section>
         </div>
     </main>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal error -->
+  <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Error al enviar comentario</h5>
+          <h5 class="modal-title" id="errorModalLabel">Error al enviar comentario</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           ¡Vaya!<br> Parece que ocurrió un error al enviar el comentario, comprueba que todos los campos son correctos. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal success -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel"> El comentario se envió correctamente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          El envío del comentario se ha realizado. 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
