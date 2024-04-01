@@ -256,7 +256,7 @@ main {
 }
 
 #mostrarCom{
-    position: relative; /* o 'absolute', según lo que necesites */
+    position: relative; 
     font-size: medium;
     width: 13em;
     height: 3em;
@@ -265,7 +265,7 @@ main {
     margin-bottom: 20%;
     display: flex;
     justify-content: center;
-    right: -96.5vh; /* Asumiendo que el panel tiene 250px de ancho */
+    right: -96.5vh; 
     top: 8vh;
     border: none;
     transition: transform 0.5s ease; /* Suaviza la transición */
@@ -305,6 +305,7 @@ main {
     overflow-x: auto; /* Habilita el desplazamiento horizontal si el contenido interno es más ancho */
     overflow-y: hidden; /* Evita el desplazamiento vertical */
     white-space: nowrap; /* Evita que los elementos internos pasen a la siguiente línea */
+    visibility: hidden;
     
 }
 
@@ -367,6 +368,185 @@ footer{
 }
 
 /*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
+
+/*---P2---*/
+
+@media (max-width: 1750px) {
+    #mostrarCom{
+        top: 8vh;
+        right: -97vh; 
+    }
+
+    .visible {
+        transform: translate(-68.15vw, 8vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 1550px) {
+    #mostrarCom{
+        right: -86vh; 
+    }
+
+    .visible {
+        transform: translate(-68.15vw, 10.5vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 1350px) {
+    #mostrarCom{
+        right: -75vh; 
+    }
+
+    .visible {
+        transform: translate(-68.15vw, 13vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 1250px) {
+    #mostrarCom{
+        right: -69vh; 
+    }
+
+    .visible {
+        transform: translate(-68.15vw, 22vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 1150px) {
+    #mostrarCom{
+        right: -64vh; 
+    }
+}
+
+@media (max-width: 1050px) {
+    #mostrarCom{
+        right: -58vh;
+        top: 9vh; 
+    }
+    .visible {
+        transform: translate(-68.15vw, 30vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 950px) {
+    #mostrarCom{
+        right: -53vh;
+       
+    }
+    .visible {
+        transform: translate(-68.15vw, -8vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 850px) {
+    #mostrarCom{
+        right: -47vh;
+       
+    }
+    .visible {
+        transform: translate(-68.15vw, -4vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 750px) {
+    #mostrarCom{
+        right: -42vh;
+        font-size: small;
+        width: 11em;
+        height: 3em;
+    }
+    .visible {
+        transform: translate(-68.15vw, -4vh); /* Muestra la sección y la baja un poco */  
+        size: 20%;
+    }
+    
+    .comment{
+        padding: 0%;
+        font-size: small;
+    
+    }
+   
+    /* Ajustar los inputs y textarea utilizando valores relativos */
+    .formComentario .form-floating .form-control {
+    font-size: 0.875rem; /* Tamaño de fuente relativo */
+    padding: 0.5em; /* Padding relativo al tamaño de la fuente del elemento */
+    width: 70%; /* Se adapta al ancho del contenedor */
+    height: 5%;
+    }
+  
+    /* Ajustar el área de texto para comentarios */
+    .formComentario .form-floating textarea {
+        font-size: 0.875rem; /* Tamaño de fuente relativo */
+        height: 5em; /* Altura relativa al tamaño de la fuente */
+    }
+    
+    /* Ajustar las etiquetas flotantes dentro de los campos para que coincidan */
+    .formComentario .form-floating>label {
+        font-size: 0.775rem; /* Tamaño de fuente relativo */
+        padding: 0 0.5em; /* Padding relativo */
+    }
+    
+    /* Opcional: Ajustar el tamaño de los botones utilizando valores relativos */
+    .formComentario .btn {
+        font-size: 0.875rem; /* Tamaño de fuente relativo */
+        padding: 0.5em 1em; /* Padding relativo */
+    }
+
+    .zonaComentarios {
+        margin-bottom: 15rem; /* Ajusta este valor según necesites */
+    }
+
+    #zonaEscondida{
+        height: 35%;
+    }
+  
+  .comment{
+    margin-bottom: 20%;
+    }
+
+}
+
+@media (max-width: 650px) {
+    #mostrarCom{
+        right: -36vh;
+       
+    }
+    .visible {
+        transform: translate(-68.15vw, 10vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+@media (max-width: 550px) {
+    #mostrarCom{
+        right: -31vh;
+        font-size: x-small;
+        width: 9em;
+       
+    }
+    .visible {
+        transform: translate(-68.15vw, -25vh); /* Muestra la sección y la baja un poco */  
+    }
+
+    .zonaComentarios {
+        margin-bottom: 20rem; /* Ajusta este valor según necesites */
+    }
+
+}
+
+@media (max-width: 450px) {
+    #mostrarCom{
+        right: -25vh;
+       
+    }
+    .visible {
+        transform: translate(-68.15vw, -22vh); /* Muestra la sección y la baja un poco */  
+    }
+}
+
+/*---/P2---*/
+
+
+
 
 @media (max-width: 1750px) {
     .marco-actividad img{
