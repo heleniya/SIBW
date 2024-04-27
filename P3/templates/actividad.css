@@ -96,7 +96,9 @@ nav > a:hover{
     fill: #fff; /* Establece el color de fondo del path a blanco */
   }
 
-.principal{
+/*------------------------------MAIN---------------------------*/
+/*Organizacion del main con grid en dos partes, una mas pequeña para enlaces de interes y la derecha mas grande para la actividad*/
+main {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2%; 
