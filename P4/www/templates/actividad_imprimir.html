@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir</title>
+    <link rel="icon" href="templates/images/logo14-modified.png">
+    <link rel="stylesheet" href="templates/css/actividad_imprimir.css">
+  </head>
+
+  <body>    <!-- Contenido principal -->
+    <div class="folio">  <!-- Contenedor principal para toda la información a imprimir, en actividad.html esto seria la actividad-->
+        <header>     <!-- Cabecera del documento -->
+            <div class="logo-titulo">   
+                <img id="logo" src="templates/images/logo14-modified.png" alt=""> <!-- Logo -->
+            <section class="texto-header">  <!-- Sección para el título de la actividad -->
+                <h1>{{ actividad['nombre'] }}</h1>
+            </section>
+            </div>
+        </header>
+        <main>  <!-- Contenido principal del documento -->
+            <section class="texto">  <!-- Sección para el texto-->
+                <div class="info">
+                    <p>{{ actividad['descripcion'] }}</p>
+                </div>
+                <div class="fechaprecio">   <!-- Contenedor para información adicional: contacto, fecha y precio -->
+                    <h3>Contacto: actividades@montania.es</h3>
+                    <h3>Fecha: {{ actividad['fecha'] | date('d/m/Y') }}</h3>
+                    <h3>Precio: {{ actividad['precio'] }}€</h3>
+                </div>
+            </section>
+            <footer>    <!-- Pie de página -->
+                <h5 class="copy">&copy; 2024 - Helena Ruiz Aranda </h5> <!--Copyright-->
+            </footer>
+        </main>
+    </div>

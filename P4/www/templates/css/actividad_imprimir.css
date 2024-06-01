@@ -1,0 +1,131 @@
+/*
+    Helena Ruiz Aranda 
+    A2 
+    01/04/2024
+*/
+
+/*Estilo general del documento*/
+body {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(41, 40, 40); /* Un fondo para hacer que el A4 destaque */
+  }
+  
+  /*Para ocultar los elementos que no deben mostrarse en actividad_imprimir, como el encabezado y 
+  los enlaces de interes entre otras cosas; para poder seguir la instruccion de hacer que el 
+  imprimir.html sea practicamente igual que el actividad.html y ocultar las cosas en el css*/
+
+  body > header{
+    display: none;
+  }
+
+  .sociales{
+    display: none;
+  }
+  
+
+  .folio{   /*Va a simular el folio a imprimir*/
+    width: 50vw;
+    height: 120vh;
+    padding: 5%;
+    margin: 10mm auto;
+    background-color: white; /* Fondo blanco para simular el papel */
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el contenedor que agrupa el logo y el título*/
+  .logo-titulo{
+    text-align: center;
+  }
+
+  /*Tamaño del logo*/
+  #logo{
+    width: 15%;
+  }
+  
+  /*Estilo para la fecha, precio y contacto*/
+  .fechaprecio{
+    font-family: monospace;
+    font-size: large;
+    font-style: oblique ;
+  }
+  
+  /*Estilo para pie de pagina, indicando su posicion en el folio y con el degradado para hacerlo seguir con la estetica del resto de paginas*/
+  footer{
+    margin-top: 50%;
+    left: 0; /* Alinea el footer a la izquierda de la ventana del navegador */
+    bottom:0%; /* Alinea el footer a la parte inferior de la ventana del navegador */
+    height:3% ;
+    width: 100%;
+    background: -webkit-linear-gradient(to right, #19547bb7, #ffd99bc9);
+    background: linear-gradient(to right, #19547bb7, #ffd99bc9);    
+  }
+
+/*Texto del footer (copyright)*/
+.copy{
+  margin-top: 0.5%;
+  color:white;
+  text-align: center;    
+}
+
+/*-----------------------------------------------Adaptar a distintos tamaños de dispositivos-----------------------------------------------*/
+@media (max-width: 1000px) {  
+  .folio{
+    width: 80vw;
+    height: 100vh;
+  }
+
+  footer{
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 750px) {  
+  .folio{
+    width: 70vw;
+    height: 80vh;
+  }
+
+  #logo{
+    width: 3em;
+  }
+
+  .texto-header{
+    font-size: x-small;
+  }
+
+  .info p{
+    font-size: x-small;
+  }
+
+  .fechaprecio{
+    font-size: x-small;
+  }
+
+  footer{
+    margin-top: 40%;
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 550px) {  
+
+  .folio{
+    width: 80vw;
+    height: 80vh;
+  }
+
+  .info p{
+    font-size: xx-small;
+  }
+
+  .fechaprecio{
+    font-size: x-small;
+  }
+
+  footer{
+    margin-top: 30%;
+    font-size: x-small;
+  }
+} 

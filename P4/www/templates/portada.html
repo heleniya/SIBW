@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block estilo %}
+<link rel="stylesheet" href="templates/css/portada.css">
+{% endblock %}
+{% block central %}
+	<section class="actividades">
+                <h2 class="titulo">Actividades</h2>
+                <div class="galeria-act">
+                    {% for imagen in imagenes %}
+                    <div class="imagen-act">
+                        <a href="actividad.php?ev={{ imagen.id }}">
+                            <img src="{{ imagen.ruta }}" alt="{{ imagen.descripcion }}">
+                        </a>
+                        <p>{{ imagen.descripcion }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+        </section>
+{% endblock %}

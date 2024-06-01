@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block estilo %}
+{{ parent() }}
+<link rel="stylesheet" href="templates/css/actividad.css">
+<script src="templates/js/script.js" defer></script>
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" ></script>
+{% endblock %}
+{% block central %}	
+<div class="columnaActividadComentarios">
+    <section class="actividad"> <!-- Sección para mostrar la actividad -->
+        <div class="cabecera">  <!-- Contenedor principal para el encabezado de la actividad con el nombre, fecha y precio -->
+            <h2>{{ actividad['nombre'] }}</h2>
+            <h3>{{ actividad['fecha'] | date('d/m/Y') }}</h3>
+            <h3>{{ actividad['precio'] }}€</h3>
+        </div>
+        <!-- Contenedor para la descripción y las fotos de la actividad -->
+        <section class="actividad-contenedor">
+            <div class="texto">
+                <p><br>{{ actividad['descripcion'] }}</p>
+            </div>
+            <section class="fotos"> <!-- Sección para mostrar fotos relacionadas con la actividad -->
+                <div class="marco-actividad">   <!-- Contenedores individuales para cada imagen -->
+                    <img src="{{ actividad['imagen1'] }}">
+                </div>
+                <div class="marco-actividad">
+                    <img src="{{ actividad['imagen2'] }}">
+                </div>
+            </section>
+        </section>
+        <div class="sociales">  <!-- Sección para enlaces a redes sociales y la opción de imprimir la página -->
+            <a href="https://www.instagram.com/">
+                <img src="./templates/images/Instagram_icon.png" alt="">
+            </a>
+            <a href="https://twitter.com/?lang=es">
+                <img src="./templates/images/icono-xtwitter.png" alt="">
+            </a>
+            <a href="https://www.facebook.com/?locale=es_ES">
+                <img src="./templates/images/logofb-modified.png" alt="">
+            </a>
+            <div class="boton"> <!-- Botón para imprimir la información de la actividad -->
+                <a class="boton" href="actividad_imprimir.php?ev={{ actividad['id'] }}" role="button">IMPRIMIR</a>
+            </div>
+        </div>
+    </section>
+    <section class="zonaComentarios">   <!-- Sección en la que se incluye el boton de mostrar comentarios y la seccion de comentarios con el formulario -->
+        <button type="button" id="mostrarCom" class="boton">Mostrar comentarios</button>        <!--boton para mostrar comentarios-->
+        <section id="zonaEscondida" class="comentarios">  <!-- Seccion escondida con los comentarios y el formulario, se mostrara al pulsar el boton -->
+            <div class="formComentario prueba">
+                <form id="comentarioForm" data-actividad-id="{{ actividad['id'] }}" action="actividad.php?ev={{ actividad['id'] }}" method="post" class="needs-validation" novalidate> 
+                    <div class="form-floating mb-3">  <!-- Para introducir el comentario -->
+                        <textarea class="form-control" name="texto" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+                        <label for="floatingTextarea">Comentarios</label>
+                        <div class="invalid-feedback">Por favor, deja un comentario.</div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Enviar</button> <!-- Boton enviar y limpiar formulario -->
+                        <button class="btn btn-secondary" type="reset">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Comentarios ya incluidos en la actividad -->
+            {% for comentario in comentarios %}
+                <div class="comment prueba">
+                    <p id="autor">{{ comentario['autor'] }}</p>
+                    <p id="fecha">{{ comentario['fecha'] }}</p>
+                    <p>Comentario: {{ comentario['texto'] }}</p>
+                </div>
+            {% endfor %}
+        </section>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra %}
+<!-- Modal error bootstrap-->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error al enviar comentario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¡Vaya!<br> Parece que ocurrió un error al enviar el comentario, comprueba que todos los campos son correctos.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal success bootstrap-->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">El comentario se envió correctamente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                El envío del comentario se ha realizado.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
